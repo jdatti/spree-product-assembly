@@ -12,9 +12,9 @@
     </td>
     <td class="actions">
       <% if can? :update, shipment %>
-        <%= link_to '', '#', :class => 'save-method fa fa-ok no-text with-tip',
+        <%= link_to_with_icon 'ok', '', '#', :class => 'save-method btn btn-default btn-sm no-text with-tip',
           :data => {'shipment-number' => shipment.number, :action => 'save'}, title: Spree.t('actions.save') %>
-        <%= link_to '', '#', :class => 'cancel-method fa fa-cancel no-text with-tip',
+        <%= link_to_with_icon 'delete', '', '#', :class => 'cancel-method btn btn-danger no-text with-tip',
           :data => {:action => 'cancel'}, :title => Spree.t('actions.cancel') %>
       <% end %>
     </td>
